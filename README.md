@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Since the release of DeepSeek-R1, there has been huge community interest in applying GRPO to reasoning models. However, large models like DeepSeek-R1 are very computationally expensive to train from scratch and so the open-source community has exploded with large numbers of proof of concepts and examples based on small models. [TinyZero](https://github.com/Jiayi-Pan/TinyZero) and [Mini-R1](https://www.philschmid.de/mini-deepseek-r1) are examples showing that small 3b models can learn complex reasoning directly from scratch using GRPO.
+Since the release of DeepSeek-R1, there has been huge community interest in applying GRPO (Group Relative Policy Optimization) to reasoning models. However, large models like DeepSeek-R1 are very computationally expensive to train from scratch and so the open-source community has exploded with large numbers of proof of concepts and examples based on small models. [TinyZero](https://github.com/Jiayi-Pan/TinyZero) and [Mini-R1](https://www.philschmid.de/mini-deepseek-r1) are examples showing that small 3b models can learn complex reasoning directly from scratch using GRPO.
 
 It has also been shown that reasoning capabilities can be learned for smaller models by using filtered traces of larger models [S1](https://huggingface.co/simplescaling/s1.1-32B). This appears to have several advantages, firstly it is way cheaper than training a model like DeepSeek-R1 from scratch and secondly the smaller model is then cheaper to inference and can be used on far cheaper hardware than DeepSeek-R1 which requires an optimized datacentre deployment.
 
@@ -17,6 +17,8 @@ The countdown problem, popularized by [TinyZero](https://github.com/Jiayi-Pan/Ti
 - **Not Too Difficult**: It strikes a balance between being challenging enough to test reasoning skills and being solvable by smaller models.
 - **Distinct from Traditional Math**: It deviates from standard math problems, making it a valuable tool for assessing a model's ability to generalize and adapt.
 - **Existing Projects**: TinyZero and Mini-R1 already provide a baseline with detailed code and training costs. It would make sense to stick with this problem for enhancing a distill to provide a good base of comparison.
+
+In this version of the countdown problem, we stick to the version introduced by Jiayi-Pan where the assistant has to reach a target number (e.g. 2) by combining a list of other numbers (e.g. 4, 4, 1) using basic arithmetic operations (+, -, *, /).
 
 ## Challenges in Training a Reasoning Distill Model
 
@@ -286,4 +288,4 @@ I would like to thank the open-source community (especially @Azure and @MrDragon
 - [TinyZero GitHub Repository](https://github.com/Jiayi-Pan/TinyZero)
 - [DeepSeek R1 Paper](https://arxiv.org/abs/2501.12948)
 - [Group Relative Policy Optimization (GRPO) Paper](https://arxiv.org/abs/2402.03300)
-- [math-verify Library](https://github.com/sympy/sympy)
+- [math-verify Library](https://github.com/huggingface/Math-Verify)
