@@ -76,9 +76,9 @@ def check_ans(text, target, nums):
 
 ## Training Process and Results
 
-![reward1.png](attachment:reward1.png)
+![reward1.png](/reward1.png)
 
-![completion1.png](attachment:completion1.png)
+![completion1.png](/completion1.png)
 
 The following training parameters are suitable for training on a single H100 with FFT (full fine tuning).
 
